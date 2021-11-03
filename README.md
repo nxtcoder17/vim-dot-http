@@ -1,6 +1,9 @@
 # vim-dot-http
 
-[dot-http](https://github.com/bayne/dot-http) support for vim
+forked from [dot-http](https://github.com/bayne/dot-http).
+
+## My Additions
+- added a global directory variable `dot_http_dir`, useful in case `http-client.env.json` is present in another directory
 
 ![screenshot](https://user-images.githubusercontent.com/712014/72755392-39831a00-3b7f-11ea-8407-82d666b029e3.png)
 
@@ -12,6 +15,10 @@ Features:
 - Response output displayed in scratch buffer
 
 ## Installation
+
+```lua
+--packer.nvim
+use 'nxtcoder17/vim-dot-http'
 
 ```
 # vim 8 native package loading
@@ -25,6 +32,13 @@ Running `:DotHttp` will invoke `dot-http` on the line that the cursor is current
 
 Set the current environment by setting the environment variable
 
-```
+```vimscript
 let g:dot_http_env = 'dev'
+let g:dot_http_dir = '__http__'
 ```
+or in lua,
+```lua
+vim.g.dot_http_env = 'dev'
+vim.g.dot_http_dir = '__http__'
+```
+
