@@ -3,7 +3,7 @@
 forked from [dot-http](https://github.com/bayne/dot-http).
 
 ## My Additions
-- added a global directory variable `dot_http_dir`, useful in case `http-client.env.json` is present in another directory
+- added a global env file variable `dot_http_env_file`, useful in case `http-client.env.json` is present in another directory
 
 ![screenshot](https://user-images.githubusercontent.com/712014/72755392-39831a00-3b7f-11ea-8407-82d666b029e3.png)
 
@@ -34,11 +34,13 @@ Set the current environment by setting the environment variable
 
 ```vimscript
 let g:dot_http_env = 'dev'
-let g:dot_http_dir = '__http__'
+let g:dot_http_env_file = '__http__/http-client.env.json'
 ```
+
 or in lua,
+
 ```lua
 vim.g.dot_http_env = 'dev'
-vim.g.dot_http_dir = '__http__'
+vim.g.dot_http_dir = '__http__/http-client.env.json'
 ```
 
